@@ -1,0 +1,13 @@
+.card-header:hover{
+    background: #1b6d85;
+    border: none;
+}
+.nav-item:hover a{
+    background: #1b6d85;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 20px;
+}
+#scrollUp{
+    background-color: #0b0b0b;
+}

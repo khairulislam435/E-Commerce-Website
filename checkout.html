@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <title>Checkout Form</title>
+	<style>
+        .menu-header{
+            width:100%;
+            background:#292323;
+            overflow:hidden;
+            padding:10px 0 10px 0;
+        }
+        .bg-primary{
+            background-color: #3b89dd!important;
+        }
+        .menu_head{
+            background:#292323;
+            float:left;
+            overflow:hidden;
+            margin-left:2%;
+            width:48%;
+            margin-top:5px;
+        }
+        .menu_head ul{
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        .menu_head ul li{
+            display:inline-block;
+        }
+        .menu_head ul li a{
+            color:#FFFFFF;
+            padding:15px;
+            font-size:20px;
+            display:block;
+        }
+        .menu_head ul li a:hover{
+            border-radius:50%;
+            background:#FFFFFF;
+            color:#3498db;
+
+        }
+        .sign_up{
+            float:right;
+            margin-right:2%
+            width:48%;
+            margin-top:15px;
+            margin-right:15px;
+        }
+        .abc{
+            padding: 5px;
+            color: #FFFFFF;
+            background:green;
+            border-radius:50%;
+            border:1px solid #000000;
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .sign_up{
+                width:100%;
+                margin-top:15px;
+                margin-right:15px;
+                text-align:center;
+                float:none;
+            }
+            .menu_head{
+                width:100%;
+                text-align:center;
+                float:none;
+            }
+        }
+        .menu_slider{
+            padding:5px 15px 5px 15px;
+            background:red;
+        }
+        .footer_top, .footer{
+            padding:30px;
+        }
+    </style>
+
+
+  </head>
+  <body>
+  <div class="menu-header">
+      <div class="menu_head">
+          <ul>
+              <li><a href="https://www.facebook.com/arifurrahmankhan97" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+          </ul>
+      </div>
+      <div class="sign_up">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+              Sign Up <i class="fas fa-sign-in-alt"></i>
+          </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+              Sign In <i class="fas fa-user"></i>
+          </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+              <i class="fas fa-shopping-cart"></i> <span class="badge abc">20</span>
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal" data-keyboard="false" data-backdrop="static">
+              <div class="modal-dialog">
+                  <div class="modal-content bg-primary">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <h4 class="modal-title">Sign UP</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <form action="#">
+                              <div class="form-group">
+                                  <label for="" placeholder="First Name">Type First Name</label>
+                                  <input type="email" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="" placeholder="Last Name">Type Last Name</label>
+                                  <input type="email" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="" placeholder="User Name">User Name</label>
+                                  <input type="email" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="" placeholder="Type your email">Type Email</label>
+                                  <input type="email" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="" placeholder="Type email password">Password</label>
+                                  <input type="password" class="form-control" />
+                              </div>
+                          </form>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="modal" id="myModal2" data-keyboard="false" data-backdrop="static">
+              <div class="modal-dialog">
+                  <div class="modal-content bg-primary">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <h4 class="modal-title">Sign In</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <form action="#">
+                              <div class="form-group">
+                                  <label for="" placeholder="Type your email">Type Email</label>
+                                  <input type="email" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="" placeholder="Type email password">Password</label>
+                                  <input type="password" class="form-control" />
+                              </div>
+                          </form>
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Sign In</button>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="modal" id="myModal3" data-keyboard="false" data-backdrop="static">
+              <div class="modal-dialog">
+                  <div class="modal-content bg-primary">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <h4 class="modal-title">Summary</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <table class="table table-hover table-striped table-bordered table-dark">
+                              <thead>
+                              <tr>
+                                  <td>Sub Total</td>
+                                  <td class="text-right">$274.00</td>
+                              </tr>
+                              </thead>
+                              <tr class="">
+                                  <td>Delivery</td>
+                                  <td class="text-right">Free</td>
+                              </tr>
+                              <tr>
+                                  <td>Discount</td>
+                                  <td class="text-right">-15%</td>
+                              </tr>
+                              <tr>
+                                  <td>Total</td>
+                                  <td class="text-right">$232.00</td>
+                              </tr>
+                          </table>
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <a class="btn btn-danger" href="checkout.html" >Check Out</a>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!--Sticky Menu Bar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <a class="navbar-brand" href="#" target="_blank">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="index.html" target="_blank">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#" target="_blank">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a target="_blank" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#" target="_blank">Action</a>
+                      <a class="dropdown-item" href="#" target="_blank">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#" target="_blank">Something else here</a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Disabled</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </div>
+  </nav>
+
+	 <!--Slide Menubar-->
+        <div class="container mt-5 mb-5">
+            <div class="row">
+
+                <div class="col-12 col-md-6">
+                    <div class="checkout_details_area mt-50 clearfix">
+
+                        <div class="cart-page-heading mb-30">
+                            <h5>Billing Address</h5>
+                        </div>
+
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="first_name">First Name <span>*</span></label>
+                                    <input type="text" class="form-control" id="first_name" value="" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="last_name">Last Name <span>*</span></label>
+                                    <input type="text" class="form-control" id="last_name" value="" required>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="company">Company Name</label>
+                                    <input type="text" class="form-control" id="company" value="">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="country">Country <span>*</span></label>
+                                    <select class="w-100" id="country">
+                                        <option value="usa">United States</option>
+                                        <option value="uk">United Kingdom</option>
+                                        <option value="ger">Germany</option>
+                                        <option value="fra">France</option>
+                                        <option value="ind">India</option>
+                                        <option value="aus">Australia</option>
+                                        <option value="bra">Brazil</option>
+                                        <option value="cana">Canada</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="street_address">Address <span>*</span></label>
+                                    <input type="text" class="form-control mb-3" id="street_address" value="">
+                                    <input type="text" class="form-control" id="street_address2" value="">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="postcode">Postcode <span>*</span></label>
+                                    <input type="text" class="form-control" id="postcode" value="">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="city">Town/City <span>*</span></label>
+                                    <input type="text" class="form-control" id="city" value="">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="state">Province <span>*</span></label>
+                                    <input type="text" class="form-control" id="state" value="">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="phone_number">Phone No <span>*</span></label>
+                                    <input type="number" class="form-control" id="phone_number" min="0" value="">
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label for="email_address">Email Address <span>*</span></label>
+                                    <input type="email" class="form-control" id="email_address" value="">
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="custom-control custom-checkbox d-block mb-2">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label pl-4" for="customCheck1">Terms and conitions</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox d-block mb-2">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label pl-4" for="customCheck2">Create an accout</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox d-block">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                        <label class="custom-control-label pl-4" for="customCheck3">Subscribe to our newsletter</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-5 ml-lg-auto">
+                    <div class="order-details-confirmation">
+
+                        <div class="cart-page-heading">
+                            <h5>Your Order</h5>
+                            <p>The Details</p>
+                        </div>
+
+                        <ul class="order-details-form mb-4">
+                            <li><span>Product</span> <span>Total</span></li>
+                            <li><span>Cocktail Yellow dress</span> <span>$59.90</span></li>
+                            <li><span>Subtotal</span> <span>$59.90</span></li>
+                            <li><span>Shipping</span> <span>Free</span></li>
+                            <li><span>Total</span> <span>$59.90</span></li>
+                        </ul>
+
+                        <div id="accordion" role="tablist" class="mb-4">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingOne">
+                                    <h6 class="mb-0">
+                                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="fa fa-circle-o mr-3"></i>Paypal</a>
+                                    </h6>
+                                </div>
+
+                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingTwo">
+                                    <h6 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-circle-o mr-3"></i>cash on delievery</a>
+                                    </h6>
+                                </div>
+                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quis in veritatis officia inventore, tempore provident dignissimos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingThree">
+                                    <h6 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-circle-o mr-3"></i>credit card</a>
+                                    </h6>
+                                </div>
+                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo sint repudiandae suscipit ab soluta delectus voluptate, vero vitae</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingFour">
+                                    <h6 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="fa fa-circle-o mr-3"></i>direct bank transfer</a>
+                                    </h6>
+                                </div>
+                                <div id="collapseFour" class="collapse show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est cum autem eveniet saepe fugit, impedit magni.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn essence-btn">Place Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	
+
+    <!-- Optional JavaScript -->
+<!-- FOOTER TOP -->
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-3 bg-dark footer_top">
+              <h4 class="text-light">Featured Sale</h4>
+              <ul class="nav navbar-nav">
+                  <li><a class="text-light" href="#">Alexis Hudson</a></li>
+                  <li><a class="text-light" href="#">American Apparel</a></li>
+                  <li><a class="text-light" href="#">Ben Sherman</a></li>
+                  <li><a class="text-light" href="#">Big Buddha</a></li>
+                  <li><a class="text-light" href="#">Channel</a></li>
+                  <li><a class="text-light" href="#">Christian Audgler</a></li>
+                  <li><a class="text-light" href="#">Coach</a></li>
+                  <li><a class="text-light" href="#">Coe Haan</a></li>
+              </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3 bg-info footer_top">
+              <h4 class="text-light">Mens store</h4>
+              <ul class="nav navbar-nav">
+                  <li><a class="text-light" href="#">Alexis Hudson</a></li>
+                  <li><a class="text-light" href="#">American Apparel</a></li>
+                  <li><a class="text-light" href="#">Ben Sherman</a></li>
+                  <li><a class="text-light" href="#">Big Buddha</a></li>
+                  <li><a class="text-light" href="#">Channel</a></li>
+                  <li><a class="text-light" href="#">Christian Audgler</a></li>
+                  <li><a class="text-light" href="#">Coach</a></li>
+                  <li><a class="text-light" href="#">Coe Haan</a></li>
+              </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3 bg-dark footer_top">
+              <h4 class="text-light">Women store</h4>
+              <ul class="nav navbar-nav">
+                  <li><a class="text-light" href="#">Alexis Hudson</a></li>
+                  <li><a class="text-light" href="#">American Apparel</a></li>
+                  <li><a class="text-light" href="#">Ben Sherman</a></li>
+                  <li><a class="text-light" href="#">Big Buddha</a></li>
+                  <li><a class="text-light" href="#">Channel</a></li>
+                  <li><a class="text-light" href="#">Christian Audgler</a></li>
+                  <li><a class="text-light" href="#">Coach</a></li>
+                  <li><a class="text-light" href="#">Coe Haan</a></li>
+              </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3 bg-info footer_top">
+              <h4 class="text-light">Contuct Us</h4>
+              <ul class="nav navbar-nav">
+                  <li><i class="fas fa-home"></i>156/1,Sher-E-Bangla Road,Dhaka-1209</li>
+                  <li><i class="fas fa-phone-volume"></i> 01735960181</li>
+				  <li><i class="fas fa-envelope-square"></i> khairul.winner@gmail.com</li>
+				  <li><i class="fas fa-globe-asia"></i> www.livetvsportsus.com</li>
+
+              </ul>
+          </div>
+      </div>
+  </div>
+  <!-- FOOTER -->
+
+  <div class="container-fluid bg-light text-center text-black-50 footer">
+      <span>&copy;All rights reserved | Created by Khairul Islam</span>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+	<script type="text/javascript" src="js/lightbox.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="js/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+  </body>
+</html>
